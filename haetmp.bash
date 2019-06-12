@@ -4,11 +4,11 @@
 
 #pinta-ala, tmp, 
 #
-base=$PWD
+
 gr="Grocery main and sub meters.xlsx"
 of="Offices main meters.xlsx"
 
-echo "$dir"
+
 
 for kanta in $(ls tulos); do
 	for id in $(ls tulos/$kanta); do
@@ -26,12 +26,13 @@ for kanta in $(ls tulos); do
 		rivi1=$( egrep "^([^;]+;){3}$enid;" csv/"Hack facilities.xlsx"/$csv)
 		area=$( echo "$rivi1" | cut -d";" -f5)
 		station=$( echo "$rivi1" | cut -d";" -f6)
-		
+		city=$( echo "$rivi1" | cut -d";" -f3)
+		postcode=$( echo "$rivi1" | cut -d";" -f2)
 		cp Temperature/"$station"/temperature.csv tulos/"$kanta"/"$id" || (echo "<$id || $rivi || $rivi1 || $enid ; $realid ; $area ; $station>")
 
-		echo 'facility;enid;realid;area;station' > tulos/"$kanta"/"$id"/tiedot
-		echo "$id ; $enid ; $realid ; $area ; $station" >> tulos/"$kanta"/"$id"/tiedot
-		( cd tulos/"$kanta"/"$id" ; Rscript --vanilla $base/script/yhdista.R ; rm temperature.csv) & 
+		echo 'facility;enid;realid;area;station;city;postcode' > tulos/"$kanta"/"$id"/tiedot.csv
+		echo "$id ; $enid ; $realid ; $area ; $station ; $city ; $postcode" >> tulos/"$kanta"/"$id"/tiedot.csv
+		( cd tulos/"$kanta"/"$id" ; Rscript --vanilla $SCRIPTIT/yhdista.R ; rm temperature.csv) & 
 	done
 done
 

@@ -10,7 +10,7 @@ for file in *xlsx; do
 	for i in $(ls uudet); do
 		nimi=$(head -n1 uudet/"$i" | cut -d" " -f4)
 		echo "	$nimi"
-		tail -n+2 uudet/"$i"| sed -f script/muutokset.sed > csv/"$file"/"$nimi".csv
+		tail -n+2 uudet/"$i"| sed -f $SCRIPTIT/muutokset.sed > csv/"$file"/"$nimi".csv
 		rm uudet/"$i"
 	done
 done
