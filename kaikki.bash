@@ -15,3 +15,4 @@ unzip OneDrive*
 $SCRIPTIT/siivoa.bash
 $SCRIPTIT/jaaxlsx.bash
 $SCRIPTIT/haetmp.bash
+$SCRIPTIT/merge.bash
