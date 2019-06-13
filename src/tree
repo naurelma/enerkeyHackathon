@@ -1,0 +1,42 @@
+.
+├── comma
+│   ├── Grocery_electricity_main.csv
+│   ├── Grocery_electricity_sub.csv
+│   ├── Grocery_heating.csv
+│   ├── Offices_electricity.csv
+│   └── Offices_heating.csv
+├── comma.7z
+├── Consumption_data
+│   ├── Grocery_electricity_main.csv
+│   ├── Grocery_electricity_sub.csv
+│   ├── Grocery_heating.csv
+│   ├── Offices_electricity.csv
+│   └── Offices_heating.csv
+├── Consumption_data.7z
+├── csv
+│   ├── Grocery main and sub meters.xlsx
+│   ├── Grocery opening hours from 01062018.xlsx
+│   ├── Hack facilities.xlsx
+│   └── Offices main meters.xlsx
+├── Grocery main and sub meters.xlsx
+├── Grocery opening hours from 01062018.xlsx
+├── Hack facilities.xlsx
+├── Offices main meters.xlsx
+├── OneDrive_1_6-8-2019.zip
+├── Temperature.7z
+├── tulos
+│   ├── Grocery_electricity_main.csv
+│   ├── Grocery_electricity_sub.csv
+│   ├── Grocery_heating.csv
+│   ├── Offices_electricity.csv
+│   └── Offices_heating.csv
+├── Updated data model.pdf
+├── valmis
+│   ├── Grocery_electricity_main.csv
+│   ├── Grocery_electricity_sub.csv
+│   ├── Grocery_heating.csv
+│   ├── Offices_electricity.csv
+│   └── Offices_heating.csv
+└── valmis.7z
+
+14 directories, 25 files
