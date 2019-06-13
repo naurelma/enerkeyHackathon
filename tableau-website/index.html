@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Embed</title>
+    <script
+      type="text/javascript"
+      src="https://public.tableau.com/javascripts/api/tableau-2.2.2.js"
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="azure.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body onload="createViz(0);">
+    <nav class="navbar navbar-inverse  navbar-fixed-top">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="#about">About</a></li>
+          <li><a href="#tableau">Data Explorer</a></li>
+          <li><a href="#AI">AI & Machine learning</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <div id="about" style="padding-top: 35px">
+      <h2 style="text-align:center; padding-top: 10px;">
+        About the project
+      </h2>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <br />
+          <br />
+          This website serves as our solution for the 06/19 EnerKey
+          Hackathon.​Our solution includes many levels, which are:​ ​
+          <ul>
+            <li>Low level data management by using R</li>
+            <li>Bash scripts that parses Big Data</li>
+            <li>Data Visualization as seen in the Data Explorer tab​</li>
+            <li>ML Solutions for finding deviate values.​</li>
+            <li>
+              interactive and extendable platform that this website provides​.
+            </li>
+          </ul>
+          GitHub also contains more detail of different aspects of the project.​
+          →<br />
+          <a href="https://github.com/naurelma/enerkeyHackathon"
+            >https://github.com/naurelma/enerkeyHackathon</a
+          >
+        </div>
+        <div class="col-md-6">
+          <img src="github.jpg" class="img-responsive" alt="github" />
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    &nbsp;&nbsp;
+
+    <div id="tableau" style="padding-top: 35px">
+      <h2 style="text-align:center; padding-top: 10px;">
+        Visualization solution with Tableau
+      </h2>
+
+      <ul class="pager">
+        <li>
+          <a href="#tableau" onclick="javascript:createViz(-1);">Previous</a>
+        </li>
+        <li><a href="#tableau" onclick="javascript:createViz(1);">Next</a></li>
+      </ul>
+      <div class="vizContainer" id="vizContainer"></div>
+    </div>
+    &nbsp;&nbsp;
+    <hr />
+    &nbsp;&nbsp;
+    <div id="AI" style="padding-top: 35px">
+      <h2 style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
+        ML proof of concept
+      </h2>
+      <h3>Machine learning with azure</h3>
+      <hr />
+      <div class="row">
+        <div class="col-md-8">
+          Azure Machine Learning studio provides an interactive canvas that
+          allows developing, running, testing and iterating an experiment
+          representing a predictive analysis model. Building and comparing
+          different machine learning models is effective and rapid. This
+          includes inputting and manipulating data, training model using ML
+          algorithms, scoring the model, evaluating the results and outputting
+          final values.
+          <br /><br />
+          Once satisfied with experiment it is possible to deploy it as a Web
+          Service so that you can send the model new data using REST (Machine
+          Learning Web Service) API and receive back the results. You can call
+          the web services from various programming languages and platforms,
+          such as .NET and Java, and form applications, such as Excel.
+          <br /><br />
+          REST API can be used for dashboard monitoring, usage throttling and
+          defining user access. Azure ML-studio has two types of web services:
+          <br />1. Request-Response Service <br />
+          - Scores single data record <br />2.Batch Execution Service <br />
+          - Scores batch of data records <br />
+          - Reads block of records from sources such as Azure Blop storage,
+          Azure SQL database, HTTP sources. <br />→ automating data processing
+        </div>
+        <div class="col-md-4">
+          <img src="azure.jpg" class="img-responsive" alt="github" />
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h3>What have we done?</h3>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          We used classification together with clustering to get categorical
+          values for the data points. Once we had labeled the data we used a
+          Multiclass-classification algorithm to create a predictive model,
+          which can be used to predict new data points classes.
+          <br /><br />
+          The idea behind clustering the data is that we want to turn our
+          unlabeled data into labeled in such a way that we have groups which
+          behave normally and groups which behave abnormally → Making it
+          possible to distinguish between regular and irregular data. Therefore
+          we can detect data points which might be e.g. measurement errors or
+          device malfunctions. System that alerts when data is predicted as
+          certain group → immediate response when something in the data looks
+          abnormal → reacting to device malfunctions etc. becomes much faster.
+          Example of our experiment:
+        </div>
+        <div class="col-md-6">
+          <img src="cluster.jpeg" alt="clustering" class="img-responsive" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

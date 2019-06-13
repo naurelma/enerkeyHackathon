@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+}
+
+.vizContainer {
+  text-align: center;
+}
+body {
+  padding: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
